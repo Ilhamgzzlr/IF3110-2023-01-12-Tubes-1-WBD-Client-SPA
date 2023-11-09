@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Songs {
+    width: 90%;
+    /* border: 1px solid white; */
+    margin: auto;
+}
+
+.h4{
+    /* border: 1px solid rgba(255, 255, 255, 0.305); */
+    font-size: 24px;
+    font-weight: 700;
+    height: 60px;
+    padding-top: 10px;
+}
+
+.listSongs{
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    left : 5%;
+    border-radius: 20px 20px 0 0;
+    overflow: auto;
+    /* border: 1px solid rgba(255, 255, 255, 0.305); */
+    background: #0F0F0F;
+}
+
+.header{
+    display: flex;
+    margin: 20px auto;
+    justify-content: space-between;
+    width: 95%;
+    border: 1px solid #0F0F0F;
+    color: gray;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.title{
+    margin-left: -270px;
+    margin-right: 250px;
+}
+
+
+.Song {
+    width: 300px;
+    width: 95%;
+    margin: auto;
+    height: 65px; 
+    /* border: 1px solid white; */
+    justify-content: center;
+}
+
+.Song img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin: -10px 0 0 20px;
+
+}
+
+.wrap{
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 0 0;
+    color: gray;
+}
+
+
+.judulLagu {
+    color: white;
+    margin: -10px 0 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.subLagu {
+    margin: 0 0 0 10px;
+    font-size: 15px;
+    font-weight: 400; 
+    color: gray;
+}
+
+.album_song{
+    margin-left: 440px;
+    font-size: 15px;
+    font-weight: 400; 
+}
+
+.date{
+    margin-left: 280px;
+    font-size: 15px;
+    font-weight: 400; 
+}
+
+.duration {
+    margin-left: 265px;
+    font-size: 15px;
+    font-weight: 400; 
+}
+
+.container_song:hover{
+    color: #d3ad7f;
+    background: #1e1c1b;
+    cursor: pointer;
+}
