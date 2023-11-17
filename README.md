@@ -1,27 +1,33 @@
-# React + TypeScript + Vite
+# Tubes-1-Penngembangan Aplikasi Berbasis Web 2022/2023 (IF3110)
+## "SoundVibes"
+## Kelas K1 Kelompok 12
+### Anggota Kelompok :
+1. Ilham Akbar			          (13521068)
+2. Shidqi Indy Izhari			  (13521097)
+3. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+<p align="center">
+    <img src="https://i.pinimg.com/originals/1a/f6/89/1af689d42bdb7686df444f22925f9e89.gif">
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Penjelasan Ringkas Program
+Program ini merupakan Web music player dengan konsep SPA (Single Page Application) yang dibangun menggunakan ReactJS.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Requirement
+Pastikan melakukan instalasi terhadap beberapa requirement berikut:
+1. Vs Code(https://code.visualstudio.com/download)
+2. Docker(https://www.docker.com/products/docker-desktop/)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## How to Run 
+1. Pastikan semua requirement telah terinstal
+2. Clone atau download repository ini, lalu buka dengan aplikasi Vs Code
+3. Buka terminal lalu masukkan "docker-compose up --build"
+4. Tunggu hingga selesai, lalu masukkan lagi pada terminal "docker-compose up"
+5. Buka browser lalu masukkan "http://localhost:3000"
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Pembagian Kerja Kelompok
+- Author, Error, Navbar, Home: 13521068
+- Login, Register, Playlist, Subscription: 13521097
