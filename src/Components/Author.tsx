@@ -1,8 +1,22 @@
-import React from "react";
+// import React from "react";
 import '../Css/Author.css';
 import tulus from '../Images/tulus.jpg';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
+
 
 const Author = () => {
+    const [songs, setsongs] = useState<{ id_song: number; title: string ; artist: string}[]>([]);
+    useEffect(() => {
+        axios.get('http://localhost:8000/songs')
+        .then((response) => {
+            setsongs(response.data);
+        })
+        .catch((error) => {
+            console.error('Error fetching songs:', error);
+        });
+    }, []);
     return (
         <div>
             <div className="main">
@@ -22,216 +36,29 @@ const Author = () => {
                         <h5>Date</h5>
                         <h5>Duration</h5>
                     </div>
-                    <div className="container_song">
-                        <div className="Song" id="songList">
-                            <a className="items" >
-                                <div className="wrap">
-                                    <h5 className="no">1.</h5>
-                                        <img src={tulus} alt="" />
-                                    <h5>
-                                        <div className="judulLagu">
-                                            Evaluasi
-                                        </div>
-                                        <div className="subLagu">
-                                            Hindia
-                                        </div>
-                                    </h5>
-                                    <h5 className="album_song">Lotnok.</h5>
-                                    <h5 className="date">12-02-2020</h5>
-                                    <h5 className="duration">4:20</h5>
-                                </div>
-                            </a>
+                    {songs.map((song) => (
+                        <div className="container_song">
+                            <div className="Song" id="songList">
+                                <a className="items" key={song.id_song}>
+                                    <div className="wrap">
+                                        <h5 className="no">1.</h5>
+                                            <img src={tulus} alt="" />
+                                        <h5>
+                                            <div className="judulLagu">
+                                                {song.title}
+                                            </div>
+                                            <div className="subLagu">
+                                                {song.artist}
+                                            </div>
+                                        </h5>
+                                        <h5 className="album_song">Lotnok.</h5>
+                                        <h5 className="date">12-02-2020</h5>
+                                        <h5 className="duration">4:20</h5>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div className="container_song">
-                        <div className="Song" id="songList">
-                            <a className="items" >
-                                <div className="wrap">
-                                    <h5 className="no">1.</h5>
-                                        <img src={tulus} alt="" />
-                                    <h5>
-                                        <div className="judulLagu">
-                                            Evaluasi
-                                        </div>
-                                        <div className="subLagu">
-                                            Hindia
-                                        </div>
-                                    </h5>
-                                    <h5 className="album_song">Lotnok.</h5>
-                                    <h5 className="date">12-02-2020</h5>
-                                    <h5 className="duration">4:20</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="container_song">
-                        <div className="Song" id="songList">
-                            <a className="items" >
-                                <div className="wrap">
-                                    <h5 className="no">1.</h5>
-                                        <img src={tulus} alt="" />
-                                    <h5>
-                                        <div className="judulLagu">
-                                            Evaluasi
-                                        </div>
-                                        <div className="subLagu">
-                                            Hindia
-                                        </div>
-                                    </h5>
-                                    <h5 className="album_song">Lotnok.</h5>
-                                    <h5 className="date">12-02-2020</h5>
-                                    <h5 className="duration">4:20</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="container_song">
-                        <div className="Song" id="songList">
-                            <a className="items" >
-                                <div className="wrap">
-                                    <h5 className="no">1.</h5>
-                                        <img src={tulus} alt="" />
-                                    <h5>
-                                        <div className="judulLagu">
-                                            Evaluasi
-                                        </div>
-                                        <div className="subLagu">
-                                            Hindia
-                                        </div>
-                                    </h5>
-                                    <h5 className="album_song">Lotnok.</h5>
-                                    <h5 className="date">12-02-2020</h5>
-                                    <h5 className="duration">4:20</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="container_song">
-                        <div className="Song" id="songList">
-                            <a className="items" >
-                                <div className="wrap">
-                                    <h5 className="no">1.</h5>
-                                        <img src={tulus} alt="" />
-                                    <h5>
-                                        <div className="judulLagu">
-                                            Evaluasi
-                                        </div>
-                                        <div className="subLagu">
-                                            Hindia
-                                        </div>
-                                    </h5>
-                                    <h5 className="album_song">Lotnok.</h5>
-                                    <h5 className="date">12-02-2020</h5>
-                                    <h5 className="duration">4:20</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="container_song">
-                        <div className="Song" id="songList">
-                            <a className="items" >
-                                <div className="wrap">
-                                    <h5 className="no">1.</h5>
-                                        <img src={tulus} alt="" />
-                                    <h5>
-                                        <div className="judulLagu">
-                                            Evaluasi
-                                        </div>
-                                        <div className="subLagu">
-                                            Hindia
-                                        </div>
-                                    </h5>
-                                    <h5 className="album_song">Lotnok.</h5>
-                                    <h5 className="date">12-02-2020</h5>
-                                    <h5 className="duration">4:20</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="container_song">
-                        <div className="Song" id="songList">
-                            <a className="items" >
-                                <div className="wrap">
-                                    <h5 className="no">1.</h5>
-                                        <img src={tulus} alt="" />
-                                    <h5>
-                                        <div className="judulLagu">
-                                            Evaluasi
-                                        </div>
-                                        <div className="subLagu">
-                                            Hindia
-                                        </div>
-                                    </h5>
-                                    <h5 className="album_song">Lotnok.</h5>
-                                    <h5 className="date">12-02-2020</h5>
-                                    <h5 className="duration">4:20</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="container_song">
-                        <div className="Song" id="songList">
-                            <a className="items" >
-                                <div className="wrap">
-                                    <h5 className="no">1.</h5>
-                                        <img src={tulus} alt="" />
-                                    <h5>
-                                        <div className="judulLagu">
-                                            Evaluasi
-                                        </div>
-                                        <div className="subLagu">
-                                            Hindia
-                                        </div>
-                                    </h5>
-                                    <h5 className="album_song">Lotnok.</h5>
-                                    <h5 className="date">12-02-2020</h5>
-                                    <h5 className="duration">4:20</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="container_song">
-                        <div className="Song" id="songList">
-                            <a className="items" >
-                                <div className="wrap">
-                                    <h5 className="no">1.</h5>
-                                        <img src={tulus} alt="" />
-                                    <h5>
-                                        <div className="judulLagu">
-                                            Evaluasi
-                                        </div>
-                                        <div className="subLagu">
-                                            Hindia
-                                        </div>
-                                    </h5>
-                                    <h5 className="album_song">Lotnok.</h5>
-                                    <h5 className="date">12-02-2020</h5>
-                                    <h5 className="duration">4:20</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="container_song">
-                        <div className="Song" id="songList">
-                            <a className="items" >
-                                <div className="wrap">
-                                    <h5 className="no">1.</h5>
-                                        <img src={tulus} alt="" />
-                                    <h5>
-                                        <div className="judulLagu">
-                                            Evaluasi
-                                        </div>
-                                        <div className="subLagu">
-                                            Hindia
-                                        </div>
-                                    </h5>
-                                    <h5 className="album_song">Lotnok.</h5>
-                                    <h5 className="date">12-02-2020</h5>
-                                    <h5 className="duration">4:20</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>

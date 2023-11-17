@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import '../Css/Subs.css';
 import tulus from '../Images/tulus.jpg'
 

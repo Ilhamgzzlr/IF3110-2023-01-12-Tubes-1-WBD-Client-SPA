@@ -6,6 +6,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.main{
+    background: black;
+    height: 90vh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
 .Songs {
     width: 90%;
     /* border: 1px solid white; */

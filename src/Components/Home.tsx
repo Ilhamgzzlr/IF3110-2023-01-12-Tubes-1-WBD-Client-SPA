@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import '../Css/Home.css'
 
 const Home = () => {
@@ -6,7 +6,7 @@ const Home = () => {
         <div className="main">
             <div className="Albums">
                 <div className="h4">
-                    <h4>Albums</h4>
+                    <h4>Konnnnn</h4>
                 </div>
             </div>
             <div className="listAlbum">

@@ -1,6 +1,5 @@
-import React from "react";
+// import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./Components/Home";
 import Author from "./Components/Author";
 import Playlist from "./Components/Playlist";
 import Subs from "./Components/Subscription";
@@ -10,17 +9,15 @@ import "./App.css";
 
 const App = () => {
   return (
-    <>
+    <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/author" element={<Author />} />
+        <Route path="/" element={<Author />} />
         <Route path="/playlist" element={<Playlist />} />
         <Route path="/subs" element={<Subs />} />
         <Route path="*" element={<Error />} />
-
-      </Routes>    
-    </>
+      </Routes>
+    </div>
   );
 }
 
