@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 
 const Author = () => {
-    const [songs, setsongs] = useState<{ id_song: number; title: string ; artist: string}[]>([]);
+    const [songs, setsongs] = useState<{ id_song: number; title: string ; artist: string; album: string; date: string; duration: string}[]>([]);
     useEffect(() => {
         axios.get('http://localhost:8000/songs')
         .then((response) => {
@@ -51,9 +51,15 @@ const Author = () => {
                                                 {song.artist}
                                             </div>
                                         </h5>
-                                        <h5 className="album_song">Lotnok.</h5>
-                                        <h5 className="date">12-02-2020</h5>
-                                        <h5 className="duration">4:20</h5>
+                                        <h5 className="album_song">
+                                            {song.album}
+                                        </h5>
+                                        <h5 className="date">
+                                            {song.date}
+                                        </h5>
+                                        <h5 className="duration">
+                                            {song.duration}
+                                        </h5>
                                     </div>
                                 </a>
                             </div>
